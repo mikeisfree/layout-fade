@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AutoSculpt</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+      integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <audio id="hoverSound" src="audio/click_1.mp3" preload="auto"></audio>
+    <audio
+      id="logoHoverSound"
+      src="audio/click_logo.mp3"
+      preload="auto"
+    ></audio>
+  </head>
+
+  <body>
+    <!-- Swiper Container -->
+    <div class="container">
+      <div class="blob-c">
+        <div class="shape-blob"></div>
+        <div class="shape-blob one"></div>
+        <div class="shape-blob two"></div>
+        <div class="shape-blob three"></div>
+        <div class="shape-blob four"></div>
+        <div class="shape-blob five"></div>
+        <div class="shape-blob six"></div>
+        <div class="mouse"></div>
+      </div>
+    </div>
+    <nav class="top-menu">
+      <div class="logo">
+        <p>
+          W<span class="logoName">EBZONE</span> <span class="logoNum">404</span>
+        </p>
+      </div>
+      <div class="time" id="clock">WAW: 00:00 AM</div>
+      <div class="menu-items">
+        <div class="item-1">
+          <span>PROJECTS</span>
+        </div>
+        <div class="item-2">
+          <span>ABOUT</span>
+        </div>
+        <div class="menu-dot" id="darkModeToggle"></div>
+      </div>
+    </nav>
+
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide slide1">
+          <div class="hover-container">
+            <img src="images/1.webp" />
+            <img src="images/2.webp" alt="" />
+            <img src="images/3.webp" alt="" />
+            <img src="images/4.png" alt="" />
+            <img src="images/5.webp" alt="" />
+          </div>
+          <div class="slide-content">
+            <h2 class="slide-title">airbag studio</h2>
+            <div class="slide-info">
+              <p>OVERPX / 2024</p>
+            </div>
+
+            <div class="slide-bottom">
+              <p class="slide-description">
+                Studio focusing on designing and developing advanced and
+                intuitive mobile ecosystems.
+              </p>
+              <button class="visit-button">
+                <p class="label">VISIT</p>
+              </button>
+            </div>
+          </div>
+          <div class="slide-image">
+            <img src="images/sl1.webp" alt="#" />
+          </div>
+        </div>
+        <div class="swiper-slide slide2">
+          <div class="slide-content">
+            <h2 class="slide-title">digital solutions</h2>
+            <div class="slide-info">
+              <p>TECHPRO / 2024</p>
+            </div>
+            <div class="slide-bottom">
+              <p class="slide-description">
+                Innovative digital solutions for modern businesses, enhancing
+                productivity and user experience.
+              </p>
+              <button class="visit-button">VISIT</button>
+            </div>
+          </div>
+          <div class="slide-image">
+            <img src="images/sl2.webp" alt="Digital Solutions" />
+          </div>
+        </div>
+        <div class="swiper-slide slide3">
+          <div class="slide-content">
+            <h2 class="slide-title">creative hub</h2>
+            <div class="slide-info">
+              <p>ARTFLOW / 2024</p>
+            </div>
+            <div class="slide-bottom">
+              <p class="slide-description">
+                A collaborative space for artists and designers to bring their
+                creative visions to life.
+              </p>
+              <button class="visit-button">VISIT</button>
+            </div>
+          </div>
+          <div class="slide-image">
+            <img src="images/sl3.webp" alt="Creative Hub" />
+          </div>
+        </div>
+        <div class="swiper-slide slide1">
+          <div class="slide-content">
+            <h2 class="slide-title">airbag studio</h2>
+            <div className="slide-info">
+              <p>OVERPX / 2024</p>
+            </div>
+            <br />
+            <div class="slide-bottom">
+              <p class="slide-description">
+                Studio focusing on designing and developing advanced and
+                intuitive mobile ecosystems.
+              </p>
+              <button class="visit-button">VISIT</button>
+            </div>
+          </div>
+          <div class="slide-image">
+            <img src="images/sl1.webp" alt="#" />
+          </div>
+        </div>
+        <div class="swiper-slide slide2">
+          <div class="slide-content">
+            <h2 class="slide-title">digital solutions</h2>
+            <div class="slide-info">
+              <p>TECHPRO / 2024</p>
+            </div>
+            <div class="slide-bottom">
+              <p class="slide-description">
+                Innovative digital solutions for modern businesses, enhancing
+                productivity and user experience.
+              </p>
+              <button class="visit-button">VISIT</button>
+            </div>
+          </div>
+          <div class="slide-image">
+            <img src="images/sl2.webp" alt="Digital Solutions" />
+          </div>
+        </div>
+        <div class="swiper-slide slide3">
+          <div class="slide-content">
+            <h2 class="slide-title">creative hub</h2>
+            <div class="slide-info">
+              <p>ARTFLOW / 2024</p>
+            </div>
+            <div class="slide-bottom">
+              <p class="slide-description">
+                A collaborative space for artists and designers to bring their
+                creative visions to life.
+              </p>
+              <button class="visit-button">VISIT</button>
+            </div>
+          </div>
+          <div class="slide-image">
+            <img src="images/sl3.webp" alt="Creative Hub" />
+          </div>
+        </div>
+      </div>
+      <div class="pagination-Controlls">
+        <div id="progress-container">
+          <svg
+            id="progress-ring"
+            width="100"
+            height="100"
+            viewBox="0 0 100 100"
+          >
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              stroke="transparent"
+              stroke-width="5"
+              fill="none"
+            />
+            <circle
+              id="progress-ring-circle"
+              cx="50"
+              cy="50"
+              r="45"
+              stroke="black"
+              stroke-width="1"
+              fill="none"
+              stroke-dasharray="282.74"
+              stroke-dashoffset="282.74"
+            />
+            <text
+              id="progress-text"
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+              font-size="20"
+              fill="black"
+            >
+              1
+            </text>
+          </svg>
+        </div>
+        <div id="custom-pagination-wheel" class="pagination-wheel"></div>
+        <div class="swiper-button-prev">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M4 12L10 6M4 12L10 18M4 12H14.5M20 12H17.5"
+                stroke="#000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M4 12H6.5M20 12L14 6M20 12L14 18M20 12H9.5"
+                stroke="#000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+          excepturi vel dicta.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="js/clock.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("load", function () {
+          initializeSwiper();
+        });
+
+        let totalSlides; // Declare totalSlides here
+        const radius = 45; // Radius for the progress circle
+        const circumference = 2 * Math.PI * radius; // Circumference of the circle
+
+        function initializeSwiper() {
+          const swiper = new Swiper(".swiper-container", {
+            loop: true,
+            direction: "horizontal",
+            effect: "fade",
+            fadeEffect: {
+              crossFade: true,
+            },
+            mousewheel: {
+              invert: false,
+              sensitivity: 0.5,
+              thresholdDelta: 10,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            on: {
+              init: function () {
+                totalSlides = this.slides.length; // Initialize totalSlides
+                updateProgressBar(this); // Update progress bar on init
+                updateNavigationVisibility(this);
+                animateCurrentSlide(this);
+              },
+              slideChange: function () {
+                resetAnimations();
+                updateNavigationVisibility(this);
+                updateProgressBar(this); // Update progress bar on slide change
+              },
+              slideChangeTransitionEnd: function () {
+                animateCurrentSlide(this);
+              },
+            },
+          });
+
+          function updateProgressBar(swiper) {
+            const currentSlide = swiper.realIndex + 1; // Current slide index
+            const progressText = document.getElementById("progress-text");
+            const progressCircle = document.getElementById(
+              "progress-ring-circle"
+            );
+
+            // Update the text showing the current slide
+            progressText.textContent = currentSlide;
+
+            // Calculate the progress based on the current slide
+            const progress = (currentSlide / totalSlides) * circumference;
+            const offset = circumference - progress;
+
+            // Update the stroke-dashoffset for the circle
+            progressCircle.style.strokeDashoffset = offset;
+          }
+
+          function updateNavigationVisibility(swiper) {
+            const prevButton = document.querySelector(".swiper-button-prev");
+            const nextButton = document.querySelector(".swiper-button-next");
+
+            if (prevButton && nextButton) {
+              prevButton.style.display = "block";
+              nextButton.style.display = "block";
+            }
+          }
+
+          function resetAnimations() {
+            const slides = document.querySelectorAll(".swiper-slide");
+            slides.forEach((slide) => {
+              const content = slide.querySelector(".slide-content");
+              const title = slide.querySelector(".slide-title");
+              const description = slide.querySelector(".slide-description");
+              const button = slide.querySelector(".visit-button");
+
+              if (content)
+                gsap.set(content, { opacity: 0, visibility: "hidden" });
+              if (title)
+                gsap.set([title, description, button], { opacity: 0, y: 20 });
+            });
+          }
+
+          function animateTitle(title) {
+            gsap.fromTo(
+              title,
+              { x: "-50%", letterSpacing: "0.3em", opacity: 0 },
+              {
+                duration: 1.8,
+                x: "0%",
+                letterSpacing: "0em",
+                opacity: 1,
+                ease: "power3.out",
+              }
+            );
+          }
+
+          function playHoverSound() {
+            const hoverSound = document.getElementById("hoverSound");
+            hoverSound.currentTime = 0;
+            hoverSound.play();
+          }
+
+          function playLogoHoverSound() {
+            const logoHoverSound = document.getElementById("logoHoverSound");
+            logoHoverSound.currentTime = 0;
+            logoHoverSound.play();
+          }
+
+          function animateCurrentSlide(swiper) {
+            const currentSlide = swiper.slides[swiper.activeIndex];
+            const content = currentSlide.querySelector(".slide-content");
+            const title = currentSlide.querySelector(".slide-title");
+            const description =
+              currentSlide.querySelector(".slide-description");
+            const button = currentSlide.querySelector(".visit-button");
+
+            if (content) {
+              gsap.to(content, {
+                opacity: 1,
+                visibility: "visible",
+                duration: 0.5,
+              });
+            }
+
+            if (title) {
+              animateTitle(title);
+              title.addEventListener("mouseenter", function () {
+                animateTitle(this);
+                playHoverSound();
+              });
+            }
+
+            if (description && button) {
+              gsap.fromTo(
+                [description, button],
+                { y: 20, opacity: 0 },
+                {
+                  duration: 1.3,
+                  y: 0,
+                  opacity: 1,
+                  stagger: 0.8,
+                  ease: "power3.out",
+                }
+              );
+            }
+
+            const slideImage = currentSlide.querySelector(".slide-image");
+            if (slideImage) {
+              slideImage.addEventListener("mouseenter", playHoverSound);
+            }
+          }
+
+          // Add hover sound to menu items
+          const menuItems = document.querySelectorAll(".menu-items span");
+          menuItems.forEach((item) => {
+            item.addEventListener("mouseenter", playHoverSound);
+          });
+
+          const vbutton = document.querySelectorAll(".visit-button");
+          vbutton.forEach((item) => {
+            item.addEventListener("mouseenter", playHoverSound);
+          });
+
+          // Add hover sound to logo
+          const logo = document.querySelector(".logo");
+          if (logo) {
+            logo.addEventListener("mouseenter", playLogoHoverSound);
+          }
+
+          // Initial animation for the first slide
+          animateCurrentSlide(swiper);
+          updateProgressBar(swiper); // Update progress bar for the first slide
+
+          // Apply hover effects to all slides
+          swiper.slides.forEach((slide) => {
+            const title = slide.querySelector(".slide-title");
+            const slideImage = slide.querySelector(".slide-image");
+
+            if (title) {
+              title.addEventListener("mouseenter", function () {
+                animateTitle(this);
+                playHoverSound();
+              });
+            }
+
+            if (slideImage) {
+              slideImage.addEventListener("mouseenter", playHoverSound);
+            }
+          });
+        }
+      });
+    </script>
+
+    <script>
+      const mouseElement = document.querySelector(".mouse");
+
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let currentX = mouseX;
+      let currentY = mouseY;
+      const smoothingFactor = 0.04; // Ajuste esse valor para controlar a suavidade
+
+      function onMouseMove(event) {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+      }
+
+      function updatePosition() {
+        // Interpolação linear para suavizar o movimento
+        currentX += (mouseX - currentX) * smoothingFactor;
+        currentY += (mouseY - currentY) * smoothingFactor;
+
+        mouseElement.style.left =
+          currentX - mouseElement.clientWidth / 2 + "px";
+        mouseElement.style.top =
+          currentY - mouseElement.clientHeight / 2 + "px";
+
+        requestAnimationFrame(updatePosition);
+      }
+
+      document.addEventListener("mousemove", onMouseMove);
+      requestAnimationFrame(updatePosition);
+    </script>
+
+    <script>
+      const hoverContainer = document.querySelector(".swiper-slide");
+      const images = hoverContainer.querySelectorAll("img");
+      const distanceOfAnotherImgToRender = 120;
+
+      ///state variables
+      let currentImageIndex = 0;
+      let prevX = undefined;
+      let prevY = undefined;
+
+      images.forEach((img) => {
+        img.setAttribute("data-active", "false");
+      });
+
+      hoverContainer.addEventListener("mousemove", function (e) {
+        const rect = hoverContainer.getBoundingClientRect();
+
+        const x = e.clientX - rect.x;
+        const y = e.clientY - rect.y;
+
+        if (
+          prevX === undefined ||
+          prevY === undefined ||
+          Math.abs(x - prevX) > distanceOfAnotherImgToRender ||
+          Math.abs(y - prevY) > distanceOfAnotherImgToRender
+        ) {
+          const i = currentImageIndex;
+          prevX = x;
+          prevY = y;
+
+          ///doing this because of if image is active
+          ///and that same image is called then the
+          ///image will instantly disappear
+          ///it will still give the instantly disappear effect
+          ///but little less
+          if (images[i].dataset.active === "true") {
+            images[i].classList.remove("active");
+          }
+
+          images[i].setAttribute("data-active", "true");
+          images[i].classList.add("active");
+
+          setTimeout(() => {
+            images[i].classList.remove("active");
+            images[i].setAttribute("data-active", "false");
+          }, 400);
+
+          images[i].style.left = `${x}px`;
+          images[i].style.top = `${y}px`;
+
+          if (currentImageIndex < images.length - 1) {
+            currentImageIndex++;
+          } else if (currentImageIndex >= images.length - 1) {
+            currentImageIndex = 0;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
